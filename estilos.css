@@ -1,3 +1,9 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 /*NAVBAR*/
 
 header {
@@ -64,6 +70,7 @@ footer {
   justify-content: center;
   height: 80px;
   align-items: end;
+  margin-top: 5rem;
 }
 
 footer p {
@@ -73,4 +80,80 @@ footer p {
 footer img {
   margin-left: 3px;
   width: 10px;
+}
+
+/*PRODUCTOS*/
+
+.cards {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/*NOSOTROS*/
+
+.reseñas-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.reseña-item {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/*MEDIA QUERYS*/
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .opcionesMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Media Query para tabletas */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cards {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
+
+/* Media Query para pantallas grandes */
+@media (min-width: 1025px) {
+  .cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card {
+    width: 18rem;
+  }
 }
